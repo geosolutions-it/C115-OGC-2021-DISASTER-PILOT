@@ -11,7 +11,7 @@ ENV GEOSERVER_DATA_DIR="/geoserver_data/data"
 # Download and install GeoServer
 #
 RUN cd /usr/local/tomcat/webapps \
-    && wget --no-check-certificate --progress=bar:force:noscroll https://artifacts.geonode.org/geoserver/${GEOSERVER_VERSION}/geoserver.war -O geoserver.war \
+    && wget --no-check-certificate --progress=bar:force:noscroll https://artifacts.geonode.org/geoserver/${GEOSERVER_VERSION}-C115-OGC-2021-DISASTER-PILOT/geoserver.war -O geoserver.war \
     && unzip -q geoserver.war -d geoserver \
     && rm geoserver.war \
     && mkdir -p $GEOSERVER_DATA_DIR
